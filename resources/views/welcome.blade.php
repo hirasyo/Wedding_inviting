@@ -31,6 +31,22 @@
                 <div class="title m-b-md">
                     出欠確認
                 </div>
+                
+                <form method="post"  class="form-group row">
+                    <label for="register_name" class="col-md-4 col-form-label text-md-right">{{ __('氏名') }}</label>
+                    <div class="col-md-6">
+                        <input id="register_name" type="text" class="form-control" name="text" >
+                    </div>
+
+                    <label for="register_attend" class="col-md-4 col-form-label text-md-right">{{ __('出席or欠席') }}</label>
+                    <div class="col-md-6">
+                        <input id="register_attend" type="radio" class="form-control" name="register_attend" value=true checked>
+                        <input id="register_attend" type="radio" class="form-control" name="register_attend" value=false>
+                    </div>
+                    <br>
+
+                    <input type="submit" value="送信する">
+                </form>
             </div>
         </div>
     </body>
