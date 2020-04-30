@@ -32,10 +32,12 @@
                     出欠確認
                 </div>
                 
-                <form method="post"  class="form-group row">
+                <form action="{{ route('membersRegistration') }}" method="post"  class="form-group row">
+                    @csrf
                     <label for="register_name" class="col-md-4 col-form-label text-md-right">{{ __('氏名') }}</label>
                     <div class="col-md-6">
-                        <input id="register_name" type="text" class="form-control" name="text" >
+                        <input id="register_name" type="text" class="form-control" name="register_name" >
+                        @if($errors->has('register_name')) <br><span class="text-danger">{{ $errors->first('register_name') }}</span> @endif
                     </div>
 
                     <label for="register_attend" class="col-md-4 col-form-label text-md-right">{{ __('出席or欠席') }}</label>
